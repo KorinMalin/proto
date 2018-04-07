@@ -272,5 +272,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
+
+        public bool OSOL()
+        {
+            if (m_CharacterController != null)
+                return m_CharacterController.isGrounded;
+            else
+                return true;
+        }
     }
 }
